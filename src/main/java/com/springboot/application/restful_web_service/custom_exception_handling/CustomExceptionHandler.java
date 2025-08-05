@@ -35,7 +35,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
         ErrorDetails errorDetails = new ErrorDetails(LocalDateTime.now(),
                 "Total validation errors- " + ex.getErrorCount() + " first error is " + ex.getFieldError().getDefaultMessage(),
                 request.getDescription(false));
-        return new ResponseEntity(errorDetails, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(errorDetails, HttpStatus.BAD_REQUEST);
     }
 
 }
