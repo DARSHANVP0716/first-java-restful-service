@@ -26,7 +26,7 @@ public class UserController {
     }
 
     //GET /users/2
-    @GetMapping("/users/{id}")   //mention var name
+    @GetMapping("/users/{id}")   //mention var names
     public Users retrieveUserById(@PathVariable int id){    //return type Users - we are returning a one user from list not entire list so used Users type as the return item is type of Users
         Users user = userService.returnUserById(id);
         if (user==null){
