@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-@Controller   //Service class is a service layer responsible for business logic performing operations on resources - communicates with Controller and Repository classes
+@Controller   //DAO layer which operates directly on DB by running direct queries
 public class UserServiceDAO {
     private static int userIdIncrement;
     private static List<Users> users = new ArrayList<>();

@@ -33,6 +33,7 @@ public class UserController {
             throw new UserNotFoundException("id "+id);
          }
         return user ;
+
     }
 
     //POST  /users
